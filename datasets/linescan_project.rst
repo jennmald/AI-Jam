@@ -28,8 +28,8 @@ Interpreting the log files
 
 There are currently two log files:
 
-+ linescan_evaluation.txt.1
-+ linescan_evaluation.txt.2
++ ``linescan_evaluation.txt.1``
++ ``linescan_evaluation.txt.2``
 
 They are identical in structure.  I rotate the logs every few months.
 I just rotated them today.  Starting Monday, BMM will begin making new
@@ -221,7 +221,7 @@ If we look at the metadata of the record:
 
   md = bmm_catalog['c0cedeca-5503-4f82-8928-77b2416a73e2'].metadata
 
-md['start']['detectors'] is
+``md['start']['detectors']`` is
 
 .. code-block:: python
 
