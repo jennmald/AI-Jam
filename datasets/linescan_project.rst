@@ -12,12 +12,12 @@ to alignment problem.
 Each time an alignment scan has been made in the last year, a flat
 text file has been written with entries containing:
 
- + The date and time of the scan
- + The kind of scan, i.e. which motor was moved and which detector was
-   probed
- + The UID of the Tiled record
- + The position that was selected either by the human or by the
-   automated process running the scan
++ The date and time of the scan
++ The kind of scan, i.e. which motor was moved and which detector was
+  probed
++ The UID of the Tiled record
++ The position that was selected either by the human or by the
+  automated process running the scan
 
 The concept is to consume the data from these measurements and develop
 a predictor for future measurements.
@@ -28,8 +28,8 @@ Interpreting the log files
 
 There are currently two log files:
 
- + linescan_evaluation.txt.1
- + linescan_evaluation.txt.2
++ linescan_evaluation.txt.1
++ linescan_evaluation.txt.2
 
 They are identical in structure.  I rotate the logs every few months.
 I just rotated them today.  Starting Monday, BMM will begin making new
