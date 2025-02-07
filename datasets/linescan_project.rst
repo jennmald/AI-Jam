@@ -85,16 +85,28 @@ Examining bmm_catalog:
 Apparently, as of the time of this writing, BMM has done just over
 208,000 things that have been recorded in Databroker.
 
-The examples below all use the scan UID as indices, for example the
-UID of the most recent scan is ``3b5dc5fa-9252-43cc-b70d-8288f03dbb69``,
-so
+The examples below all use the scan UID as indices, for example
+consider the most recent scan:
 
-.. code-block:: text
+.. code-block:: python
+
+   most_recent = bmm_catalog[-1]
+
+We can find the UID by
+
+.. code-block:: python
+
+   most_recent.metadata['start']['uid']
+
+It is ``3b5dc5fa-9252-43cc-b70d-8288f03dbb69``, so
+
+.. code-block:: python
 
     uid = '3b5dc5fa-9252-43cc-b70d-8288f03dbb69'
-    bmm_catalog[uid]
+    most_recent = bmm_catalog[uid]
 
-returns the record for that scan.
+returns the record for that scan.  When examining historical data, we
+will almost always use the UIDs.
 
 The metadata, which is structured as a nested dict (or, equivalently,
 a JSON string) can be examined by
@@ -114,6 +126,8 @@ and the columns can be obtained as arrays by things like
 .. code-block:: text
 
     bmm_catalog[uid].primary.read()['I0']
+
+That should be enough to get you started exploring Tiled records.
 
 
 
